@@ -2,29 +2,38 @@
 //  MainViewController.swift
 //  CoordinatorTest
 //
-//  Created by Jin Lee on 10/10/19.
+//  Created by Jin Lee on 9/10/19.
 //  Copyright © 2019 Jin Lee. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+protocol MainViewControllerDelegate: AnyObject { //NSObject gives error when coordinate initializer uses 'self' inside
+    func MainVCAddTapped()
+    func MainVCPushTapped()
+}
 
+class MainViewController: UIViewController {
+    //weak must not be applied to non-class-bound MainVC
+    weak var delegate: MainViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("MainVC loaded")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    deinit {
+        print("MainVC dismissed")
     }
-    */
-
+    
+    @objc func addTapped() {
+        // present modalView
+        delegate?.MainVCAddTapped()
+    }
+    
+    @IBAction func pushTapped(_ sender: UIButton) {
+        delegate?.MainVCPushTapped()
+    }
 }
+

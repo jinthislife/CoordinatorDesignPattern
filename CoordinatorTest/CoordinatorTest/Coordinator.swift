@@ -10,20 +10,14 @@ import UIKit
 
 final class Coordinator {
     var navigationController: UINavigationController?
-    let rootViewController: RootViewController
+    var mainViewController: MainViewController
+//    var secondViewController: SecondViewController? = nil
+    // Unlike MainVC, this VC keeps being pushed and poped // if coordinator keeps holding this this VC is not deallocated right after being popped
     
-//    init(with rootViewController: RootViewController) {
-//        super.init()
-//        self.rootViewController = rootViewController
-//        rootViewController.delegate = self
-//        self.navigationController = rootViewController.navigationController
-        // self used before super.init() call
-//
-//    }
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.rootViewController = navigationController.viewControllers.first as! RootViewController
-        self.rootViewController.delegate = self
+        self.mainViewController = navigationController.viewControllers.first as! MainViewController
+        self.mainViewController.delegate = self
     }
     
     deinit {
@@ -31,11 +25,36 @@ final class Coordinator {
     }
 }
 
-extension Coordinator: RootViewControllerDelegate {
-    func RootVCAddTapped() {
-        let secondVC = UIStoryboard().instantiateViewController(identifier: "SecondVC")
-        navigationController?.pushViewController(secondVC, animated: true)
+extension Coordinator: MainViewControllerDelegate {
+    func MainVCAddTapped() {
+        let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC") as! SecondViewController
+        secondVC.delegate = self
+        mainViewController.present(secondVC, animated: true)
     }
     
-    
+    func MainVCPushTapped() {
+        // StoryBoard instantiation should do forced type casting?
+        let secondViewController2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC") as! SecondViewController
+        navigationController?.pushViewController(secondViewController2, animated: true)
+        secondViewController2.delegate = self
+    }
 }
+
+
+extension Coordinator: SecondViewControllerDelegate, ThirdViewControllerDelegate {
+    func closePressed(_ thirdViewController: UIViewController) {
+        thirdViewController.dismiss(animated: true)
+    }
+    
+    func closeTapped(_ secondViewController: UIViewController) {
+        secondViewController.dismiss(animated: true)
+    }
+    
+    func editTapped(_ secondViewController: UIViewController) {
+        let thirdViewController2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ThirdVC") as! ThirdViewController
+        thirdViewController2.delegate = self
+        secondViewController.present(thirdViewController2, animated: true)
+    }
+}
+
+

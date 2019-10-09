@@ -16,11 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "RootVC") as RootViewController
+//        let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "RootVC") as MainViewController
 //            coordinator = Coordinator(with: rootVC)
-        print(window!.rootViewController === nil)
-        coordinator = Coordinator(window!.rootViewController as! UINavigationController)
-            print(coordinator === nil)
+//        print(window!.MainViewController === nil)
+//        coordinator = Coordinator(window!.RootViewController as! UINavigationController)
+//            print(coordinator === nil)
         return true
     }
 

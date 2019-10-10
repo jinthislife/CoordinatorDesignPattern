@@ -13,9 +13,11 @@
 		F1EC1012234D4B8A00A6EB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EC1010234D4B8A00A6EB69 /* Main.storyboard */; };
 		F1EC1014234D4B8B00A6EB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1EC1013234D4B8B00A6EB69 /* Assets.xcassets */; };
 		F1EC1017234D4B8B00A6EB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EC1015234D4B8B00A6EB69 /* LaunchScreen.storyboard */; };
-		F1EC1021234D4C4C00A6EB69 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1020234D4C4C00A6EB69 /* Coordinator.swift */; };
+		F1EC1021234D4C4C00A6EB69 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1020234D4C4C00A6EB69 /* MainCoordinator.swift */; };
 		F1EC1023234D549B00A6EB69 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1022234D549B00A6EB69 /* SecondViewController.swift */; };
 		F1EC1025234DA71600A6EB69 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC1024234DA71600A6EB69 /* ThirdViewController.swift */; };
+		F1F1F83E234EA1D90021110F /* SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1F83D234EA1D90021110F /* SecondCoordinator.swift */; };
+		F1F1F840234EA3240021110F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1F83F234EA3240021110F /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +29,11 @@
 		F1EC1013234D4B8B00A6EB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1EC1016234D4B8B00A6EB69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1EC1018234D4B8B00A6EB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1EC1020234D4C4C00A6EB69 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F1EC1020234D4C4C00A6EB69 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F1EC1022234D549B00A6EB69 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F1EC1024234DA71600A6EB69 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		F1F1F83D234EA1D90021110F /* SecondCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoordinator.swift; sourceTree = "<group>"; };
+		F1F1F83F234EA3240021110F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 		F1EC1009234D4B8A00A6EB69 /* CoordinatorTest */ = {
 			isa = PBXGroup;
 			children = (
-				F1EC1020234D4C4C00A6EB69 /* Coordinator.swift */,
+				F1F1F83F234EA3240021110F /* Coordinator.swift */,
+				F1EC1020234D4C4C00A6EB69 /* MainCoordinator.swift */,
+				F1F1F83D234EA1D90021110F /* SecondCoordinator.swift */,
 				F15B7F73234E96B4001D6D20 /* MainViewController.swift */,
 				F1EC1022234D549B00A6EB69 /* SecondViewController.swift */,
 				F1EC1024234DA71600A6EB69 /* ThirdViewController.swift */,
@@ -147,11 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F1F840234EA3240021110F /* Coordinator.swift in Sources */,
 				F15B7F74234E96B4001D6D20 /* MainViewController.swift in Sources */,
-				F1EC1021234D4C4C00A6EB69 /* Coordinator.swift in Sources */,
+				F1EC1021234D4C4C00A6EB69 /* MainCoordinator.swift in Sources */,
 				F1EC100B234D4B8A00A6EB69 /* AppDelegate.swift in Sources */,
 				F1EC100D234D4B8A00A6EB69 /* SceneDelegate.swift in Sources */,
 				F1EC1023234D549B00A6EB69 /* SecondViewController.swift in Sources */,
+				F1F1F83E234EA1D90021110F /* SecondCoordinator.swift in Sources */,
 				F1EC1025234DA71600A6EB69 /* ThirdViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

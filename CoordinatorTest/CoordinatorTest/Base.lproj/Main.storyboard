@@ -41,16 +41,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsI-JM-B7R">
-                                <rect key="frame" x="179.41176470588198" y="433.17647058823513" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsI-JM-B7R">
+                                <rect key="frame" x="180" y="433" width="54" height="30"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
                                     <action selector="dismissPressed:" destination="c1O-xM-QvY" eventType="touchUpInside" id="aoz-yH-mDE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MY-Sq-HJN" userLabel="Edit">
+                                <rect key="frame" x="192" y="478" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="EditTapped:" destination="c1O-xM-QvY" eventType="touchUpInside" id="D4y-ig-YEk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7MY-Sq-HJN" firstAttribute="centerX" secondItem="CsI-JM-B7R" secondAttribute="centerX" id="YTh-08-GTF"/>
+                            <constraint firstItem="7MY-Sq-HJN" firstAttribute="centerX" secondItem="JAX-kg-zqZ" secondAttribute="centerX" id="iI0-kH-GaH"/>
+                            <constraint firstItem="7MY-Sq-HJN" firstAttribute="top" secondItem="CsI-JM-B7R" secondAttribute="bottom" constant="14.823529411764866" id="kSq-Fx-xda"/>
+                            <constraint firstItem="IvH-rJ-H4b" firstAttribute="bottom" secondItem="7MY-Sq-HJN" secondAttribute="bottom" constant="354" id="x68-Gf-ey6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IvH-rJ-H4b"/>
                     </view>
                     <connections>
@@ -87,16 +99,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xl-Rd-36V">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xl-Rd-36V">
+                                <rect key="frame" x="188" y="433" width="38" height="30"/>
+                                <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closeTapped:" destination="fhT-Fn-KPU" eventType="touchUpInside" id="SBr-ck-6PY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Xl-Rd-36V" firstAttribute="centerY" secondItem="pZG-CC-rdy" secondAttribute="centerY" id="Bvs-Nr-HXY"/>
+                            <constraint firstItem="5Xl-Rd-36V" firstAttribute="centerX" secondItem="pZG-CC-rdy" secondAttribute="centerX" id="VXK-Mj-dog"/>
+                            <constraint firstItem="5Xl-Rd-36V" firstAttribute="leading" secondItem="bBj-XZ-RCz" secondAttribute="leading" constant="188" id="hJI-m2-pAe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bBj-XZ-RCz"/>
                     </view>
                     <connections>

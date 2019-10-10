@@ -10,6 +10,7 @@ import UIKit
 
 protocol SecondViewControllerDelegate: AnyObject {
     func closeTapped(_ secondViewController: UIViewController)
+    func editTapped()
 }
 
 class SecondViewController: UIViewController {
@@ -28,5 +29,9 @@ class SecondViewController: UIViewController {
 
     @IBAction func dismissPressed(_ sender: UIButton) {
         delegate?.closeTapped(self)
+    }
+    
+    @IBAction func EditTapped(_ sender: UIButton) {
+        delegate?.editTapped()
     }
 }

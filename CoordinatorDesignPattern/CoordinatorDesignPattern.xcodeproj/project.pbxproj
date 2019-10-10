@@ -17,6 +17,7 @@
 		78341E8A2282A9AD004B8BD2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78341E892282A9AD004B8BD2 /* MainCoordinator.swift */; };
 		78341E8C2282ACE7004B8BD2 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78341E8B2282ACE7004B8BD2 /* BuyViewController.swift */; };
 		78341E8E2282ACFD004B8BD2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78341E8D2282ACFD004B8BD2 /* CreateAccountViewController.swift */; };
+		F1F1F842234EF9080021110F /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1F841234EF9080021110F /* BuyCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		78341E892282A9AD004B8BD2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		78341E8B2282ACE7004B8BD2 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		78341E8D2282ACFD004B8BD2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		F1F1F841234EF9080021110F /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +68,12 @@
 			children = (
 				78341E872282A865004B8BD2 /* StoryBoarded.swift */,
 				78341E852282A71E004B8BD2 /* Coordinator.swift */,
-				78341E732282A254004B8BD2 /* AppDelegate.swift */,
-				78341E8B2282ACE7004B8BD2 /* BuyViewController.swift */,
-				78341E752282A254004B8BD2 /* ViewController.swift */,
-				78341E8D2282ACFD004B8BD2 /* CreateAccountViewController.swift */,
 				78341E892282A9AD004B8BD2 /* MainCoordinator.swift */,
+				F1F1F841234EF9080021110F /* BuyCoordinator.swift */,
+				78341E752282A254004B8BD2 /* ViewController.swift */,
+				78341E8B2282ACE7004B8BD2 /* BuyViewController.swift */,
+				78341E8D2282ACFD004B8BD2 /* CreateAccountViewController.swift */,
+				78341E732282A254004B8BD2 /* AppDelegate.swift */,
 				78341E772282A255004B8BD2 /* Main.storyboard */,
 				78341E7A2282A256004B8BD2 /* Assets.xcassets */,
 				78341E7C2282A256004B8BD2 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				78341E8E2282ACFD004B8BD2 /* CreateAccountViewController.swift in Sources */,
 				78341E762282A254004B8BD2 /* ViewController.swift in Sources */,
 				78341E742282A254004B8BD2 /* AppDelegate.swift in Sources */,
+				F1F1F842234EF9080021110F /* BuyCoordinator.swift in Sources */,
 				78341E862282A71E004B8BD2 /* Coordinator.swift in Sources */,
 				78341E8A2282A9AD004B8BD2 /* MainCoordinator.swift in Sources */,
 				78341E882282A865004B8BD2 /* StoryBoarded.swift in Sources */,

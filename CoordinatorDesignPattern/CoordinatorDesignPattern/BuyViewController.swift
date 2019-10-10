@@ -9,7 +9,7 @@
 import UIKit
 
 class BuyViewController: UIViewController, StoryBoarded {
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: BuyCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +17,9 @@ class BuyViewController: UIViewController, StoryBoarded {
         // Do any additional setup after loading the view.
     }
 
+// I wonder if this could be called when it gets in bg
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        coordinator?.didFinishBuying()
+//    }
 }
